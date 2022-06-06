@@ -1,0 +1,210 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+body{
+    background: var(--preto);
+    font-family: 'Arial-sans', sans-serif;
+    color: var(--branco);
+    font-family: 'Helvetica', Arial, sans-serif;
+}
+
+a{ text-decoration: none; }
+li{ list-style: none; }
+
+:root{
+    --vermelho:#e50914;
+    --preto:#000;
+    --branco:#fff;
+    --branco-light: rgb(211 211 211 / 85%);
+}
+
+.main_logo{
+    background: url('../images/netflix-logo.png') no-repeat;
+    width: 180px;
+    max-width: 100%;
+    height: 80px;
+    background-size: contain;
+    text-decoration: none;
+    cursor: pointer;
+    margin: 10px 12px 0px 0px;
+}
+
+.main_flex{
+    padding:15px;
+    display: flex;
+}    
+
+.flex-justify{
+    justify-content: space-between;
+}
+
+.main_flex li{
+    margin-left: 15px;
+}
+
+.main_flex a{
+    color: var(--branco);
+    text-transform: uppercase;
+}
+
+.main_flex a:hover{
+    text-decoration: underline;
+}
+
+/** ESTILO DO BOTAO */
+.btn{
+    padding: 4px 0 6px 0;
+    cursor: pointer;
+    border: none;
+}
+
+.btn.player{
+    width:150px;
+    max-width: 100%;
+    background: var(--branco);
+    border-radius: 4px;
+    height: 40px;
+    font-size: 1em;
+}
+
+.btn.player:hover{
+    background: var(--branco-light);
+}
+
+.btn.info{
+    width: 200px;
+    max-width: 100%;
+    background: var(--branco-light);
+    border-radius: 4px;
+    height: 40px;
+    margin-left: 12px;
+    font-size: 1em;
+}
+
+.btn.info:hover{
+    background: var(--branco);
+}
+
+.fas{
+    color: var(--branco-light); 
+    margin-right: 8px;  
+}
+
+.btn:hover>.fas{
+    color:var(--preto);
+}
+
+.btn:hover>.fas.fa-play{
+    color:var(--branco);
+}
+
+.fas.fa-play{
+    color:var(--preto);
+}
+.fas.fa-info-circle{
+    color: var(--branco);
+}
+
+/** ESTILO DOS BOTOES */
+
+.bg_principal{
+    background: url('https://i2.wp.com/www.jbox.com.br/wp/wp-content/uploads/2019/02/yugioh-destacada.jpg?w=774&quality=99&strip=all&ssl=1') no-repeat;
+    background-size: cover;
+    width: 100%;
+    max-width: 100%;
+    height: 674px;
+    z-index: -2;
+    position: absolute;
+    top: 0;
+}
+
+.header_text{
+    margin:240px 0;
+    width: 600px;
+    max-width: 100%;
+    padding: 20px;
+   
+}
+
+.header_text h1{
+    font-size: 4em;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 1px #000000;
+}
+
+.header_text p{
+    font-size: 1em;
+    text-shadow: 2px 0px 1px #000000;
+    margin:25px 0;
+    font-size: 1.3em;
+}
+
+.favorite_movies{
+    position: absolute;
+    margin: 560px 0;
+    max-width: 100%;
+    width: 1960px;
+}
+
+
+/* MEDIA QUERIES */
+
+@media (max-width: 576px) {
+    .main_flex{
+        padding:15px;
+        display: flex;
+        flex-direction: column;
+    } 
+    .list-nav{
+        display: none;
+    }
+
+    .main_flex li{
+        margin-bottom: 12px;
+    }
+
+    .main_logo{
+        background: url('../images/netflix-logo.png') no-repeat;
+        width: 120px;
+        max-width: 100%;
+        height: 80px;
+        background-size: contain;
+        text-decoration: none;
+        cursor: pointer;
+        margin: 10px 12px 0px 0px;
+    }
+
+    .bg_principal{
+        background: url('../image/yugi.jpg') no-repeat;
+        background-size: cover;
+        width: 576px;
+        max-width: 100%;
+        height: 674px;
+        z-index: -2;
+        position: absolute;
+        top: 0;
+    }
+
+    .btn{
+        margin-bottom: 12px;
+    }
+    .btn.player,
+    .btn.info{
+        max-width: 100%;
+        width: 350px;
+        margin:10px 0 10px;
+    }
+
+    .favorite_movies{
+        position: absolute;
+        margin: 568px 0;
+        max-width: 100%;
+        width: 1960px;
+    }
+
+}
